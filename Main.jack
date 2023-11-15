@@ -1,0 +1,32 @@
+class Main {
+       function void main() {
+              //variables for storing player inputs and game results
+              var int playerChoiceA; 
+              var int playerChoiceB;
+              var String gameMessage;
+              
+              //create RPSGame object
+              var RPSGame game;
+
+              //print start to VME screen
+              do Output.printString("Rock, Paper, Scissors game");
+              do Output.println();
+              do Output.printString("Rock = 0, Paper = 1, Scissors = 2");
+              do Output.println();
+              
+              //Asks for player A's response
+              let playerChoiceA = Keyboard.readInt("Player A input your response: ");
+              do Output.println();
+
+              //Asks for player B's response
+              let playerChoiceB = Keyboard.readInt("Player B input your response: ");
+              do Output.println();
+              
+              //use determineWinner function from RPSGame to print who won
+              let gameMessage = game.determineWinner(playerChoiceA, playerChoiceB);
+              do Output.println();
+              do Output.printString(gameMessage);
+              do Output.println();
+              return;
+    }
+}

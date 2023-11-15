@@ -1,0 +1,25 @@
+class RPSGame {
+       //Note: 0 = rock, 1 = paper, 2 = scissors
+       //function for determining winner or rock paper scissors based on given 2 player choices
+       function String determineWinner(int playerChoiceA, int playerChoiceB) {
+              //if responses are the same
+              if (playerChoiceA = playerChoiceB) { 
+                     return "Tie";
+              } 
+              //if playerA's choice beats playerB
+              if (((playerChoiceA = 0) & (playerChoiceB = 2)) | ((playerChoiceA = 1) & (playerChoiceB = 0)) |
+               ((playerChoiceA = 2) & (playerChoiceB = 1))) {
+                     return "Player A Wins";
+              } 
+              //if playerB's choice beats playerA
+              if (((playerChoiceB = 0) & (playerChoiceA = 2)) | ((playerChoiceB = 1) & (playerChoiceA = 0)) |
+               ((playerChoiceB = 2) & (playerChoiceA = 1))) {
+                     return "Player B Wins";
+              }   
+              //if the answer cannot be determined return this message 
+              else {
+                     return "Results cannot be determined";
+              }
+       }
+       
+}
